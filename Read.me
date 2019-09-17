@@ -1,0 +1,53 @@
+endpoints
+"por simplicidad los modelos los maneje usando el id que genera mongoDB"
+
+api/todo
+api/user
+api/user/login 
+
+***Para login primero crear un usuario***
+api/user/login (con postman usar body tipo x-www-form-urlencoded con campos
+email y passwd. retorna un token JWT)
+
+***IMPORTANTE***
+Los metodos POST, PUT y DELETE estan protegidos por autenticacion.
+Mandar un token en la cambecera authoration valor "token  eyevehvdjbjabsbac...."
+
+Para obtener un token debe crear un usuario o hacer login con un usuario.
+
+Listar
+GET api/todo/todoId (get one todo)
+GET api/todo (get All)
+
+GET api/user/userId (get one user)
+GET api/user (get All)
+
+Crear
+POST api/todo (con postman usar body tipo x-www-form-urlencoded)
+campos de un todo
+    name
+    description
+    complete (true | false)
+    
+POST api/user (con postman usar body tipo x-www-form-urlencoded)  
+campos de un user
+    username 
+    passwd
+    email
+    
+Actualizar
+PUT api/todo (con postman usar body tipo x-www-form-urlencoded)
+campos de un todo
+    name
+    description
+    complete (true | false)
+    
+PUT api/user (con postman usar body tipo x-www-form-urlencoded)  
+campos de un user
+    username 
+    passwd
+    email
+    
+Borrar
+DELETE api/todo/todoId
+DELETE api/user/userId
